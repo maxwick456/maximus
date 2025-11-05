@@ -38,6 +38,17 @@
             margin: 0 auto;
             text-align: center;
         }
+        
+        /* Added logo styling */
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+            margin-bottom: 20px;
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
 
         h1 {
             font-size: 2.5rem;
@@ -122,6 +133,8 @@
 
     <div class="container">
         <header>
+            <!-- Image added here -->
+            <img src="https://99v.org/logo.png" alt="99v.org logo" class="logo">
             <h1>Hello! I'm Maximus.</h1>
             <p class="intro">A 14-year-old in 9th grade with a passion for programming. I've been building things for the web for almost 4 years!</p>
         </header>
