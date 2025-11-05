@@ -38,17 +38,6 @@
             margin: 0 auto;
             text-align: center;
         }
-        
-        /* Added logo styling */
-        .logo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%; /* Makes the image circular */
-            object-fit: cover; /* Ensures the image covers the area without distortion */
-            margin-bottom: 20px;
-            border: 3px solid var(--accent-color);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
 
         h1 {
             font-size: 2.5rem;
@@ -93,16 +82,31 @@
             border-radius: 10px;
             padding: 25px;
             margin-bottom: 20px;
-            text-align: left;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-        .card h3 {
+        /* Project Card Specific Styling */
+        .project-card {
+            display: flex;
+            align-items: center;
+            gap: 25px; /* Space between logo and text */
+            text-align: left;
+        }
+
+        .project-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 12px;
+            object-fit: cover;
+            flex-shrink: 0; /* Prevents the logo from shrinking */
+        }
+        
+        .project-card h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
         }
 
-        .card p {
+        .project-card p {
             color: var(--secondary-text-color);
         }
 
@@ -126,6 +130,14 @@
             transform: translateY(-5px);
             background-color: #3a3a3a;
         }
+        
+        /* Media query for smaller screens */
+        @media (max-width: 600px) {
+            .project-card {
+                flex-direction: column; /* Stack logo on top of text */
+                text-align: center;
+            }
+        }
 
     </style>
 </head>
@@ -133,8 +145,6 @@
 
     <div class="container">
         <header>
-            <!-- Image added here -->
-            <img src="https://99v.org/logo.png" alt="99v.org logo" class="logo">
             <h1>Hello! I'm Maximus.</h1>
             <p class="intro">A 14-year-old in 9th grade with a passion for programming. I've been building things for the web for almost 4 years!</p>
         </header>
@@ -146,9 +156,13 @@
         
         <section class="projects">
             <h2>My Projects</h2>
-            <div class="card">
-                <h3><a href="https://99v.org" target="_blank" rel="noopener noreferrer">Max's Unblocked Games</a></h3>
-                <p>A website I built in 8th grade that hosts unblocked games for students. It has a variety of games and is constantly updated with new ones.</p>
+            <!-- Updated Project Card -->
+            <div class="card project-card">
+                <img src="https://99v.org/logo.png" alt="Max's Unblocked Games Logo" class="project-logo">
+                <div class="project-info">
+                    <h3><a href="https://99v.org" target="_blank" rel="noopener noreferrer">Max's Unblocked Games</a></h3>
+                    <p>A website I built in 8th grade that hosts unblocked games for students. It has a variety of games and is constantly updated with new ones.</p>
+                </div>
             </div>
         </section>
 
