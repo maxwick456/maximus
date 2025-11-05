@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximus | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Modern CSS Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Variables for easy color changes */
+        :root {
+            --bg-color: #1a1a1a;
+            --card-color: #2c2c2c;
+            --primary-text-color: #e0e0e0;
+            --secondary-text-color: #a0a0a0;
+            --accent-color: #00aaff;
+            --hover-color: #0088cc;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-text-color);
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            color: var(--secondary-text-color);
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-weight: 300;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--hover-color);
+            text-decoration: underline;
+        }
+
+        .card {
+            background-color: var(--card-color);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            text-align: left;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--secondary-text-color);
+        }
+
+        .hobbies-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .hobbies-list li {
+            background-color: var(--card-color);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 400;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .hobbies-list li:hover {
+            transform: translateY(-5px);
+            background-color: #3a3a3a;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Hello! I'm Maximus.</h1>
+            <p class="intro">A 14-year-old in 9th grade with a passion for programming. I've been building things for the web for almost 4 years!</p>
+        </header>
+
+        <section class="languages">
+            <h2>Programming Languages</h2>
+            <p>My favorite languages are <strong>Javascript</strong> and <strong>Golang</strong>, but I also enjoy working with <strong>HTML</strong> and <strong>CSS</strong> for web development.</p>
+        </section>
+        
+        <section class="projects">
+            <h2>My Projects</h2>
+            <div class="card">
+                <h3><a href="https://99v.org" target="_blank" rel="noopener noreferrer">Max's Unblocked Games</a></h3>
+                <p>A website I built in 8th grade that hosts unblocked games for students. It has a variety of games and is constantly updated with new ones.</p>
+            </div>
+        </section>
+
+        <section class="hobbies">
+            <h2>My Hobbies</h2>
+            <ul class="hobbies-list">
+                <li>🎾 Tennis</li>
+                <li>🚵‍♂️ Mountain Biking</li>
+                <li>🎵 Listening to Music</li>
+            </ul>
+        </section>
+    </div>
+
+</body>
+</html>
